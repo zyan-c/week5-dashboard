@@ -1,0 +1,26 @@
+.nav{
+    position: fixed;
+    min-width: 296px;
+    min-height: 100vh;
+}
+// 錯誤：不要覆蓋 BS 的 class！
+.navbar-brand{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg');
+        width: 151px;
+        height: 40px;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+}
+.nav-link{
+    color: $gray-900;
+    padding: 0;
+    // 如何消除 nav-link 的 padding 樣式？
+    span{
+        vertical-align: middle;
+    }
+}
+.profile-img{
+    object-fit: cover;
+}
