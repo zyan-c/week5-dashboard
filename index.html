@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    <div class="d-flex">
       <nav class="nav flex-column bg-light justify-content-between pt-4 ps-4 pb-4 pe-4">
       <div class="sidebar-main">
         <h1 class="mb-4"><a href="" class="navbar-brand">ANSWER</a></h1>
@@ -50,22 +49,129 @@
       </div>
     </nav>
     <main>
-      <main class="container">
+      <div class="container">
+  <!-- 上方的 assignment -->
   <div class="row p-4">
-    <div class="col-6 d-flex">
-      <h2>Assignment</h2>
-      <!-- 要用 dropdown 還是 dropdown-toggle？兩者差別在哪？ -->
+    <div class="col-6 d-flex align-items-end">
+      <h2 class="me-5">Assignment</h2>
+      <!-- 待解決：要用 dropdown 還是 dropdown-toggle？兩者差別在哪？ -->
       <a href="#" class="nav-link">All Courses<span class="material-icons">expand_more</span></a>
     </div>
-    <div class="col-6 d-flex justify-content-end">
+    <div class="col-6 d-flex justify-content-end align-items-end">
       <a class="nav-link" href="#"><span class="material-icons">search</span></a>
-      <a class="nav-link" href="#"><span class="material-icons">notifications_active</span></a>
+      <a class="nav-link ms-4" href="#"><span class="material-icons">notifications_active</span></a>
     </div>
   </div>
-</main>
+  <!-- 下方的大魔王 -->
+  <div class="row p-4">
+    <!-- col-4 和 col8 可加小的斷點：col-12 -->
+    <div class="col-4 d-flex flex-column">
+      <a href="" class="nav-link mb-2">All(4)<span class="material-icons">expand_more</span></a>
+      <div class="list-gruop rounded">
+        <!-- a 裡面包 div？！ -->
+        <!-- 如何改 a .active 的顏色？ -->
+        <a href="" class="list-group-item list-group-item-action active">
+          <div class="d-flex w-100 justify-content-between">
+            <small>Chapter Assignment 2</small>
+            <small>4 hrs ago</small>
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <p class="fw-bold">Please check this file…</p>
+            <small class="text-sm">Emily Wang</small>
+          </div>
+        </a>
+        <a href="" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <small>Chapter Assignment 1</small>
+            <small>12 hrs ago</small>
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <p class="fw-bold">My Homework</p>
+            <small class="text-sm">David Xu</small>
+          </div>
+        </a>
+        <a href="" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <small>Final Assignment</small>
+            <small>18 hrs ago</small>
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <p class="fw-bold">Have a problem with this…</p>
+            <small class="text-sm">Tony Wei</small>
+          </div>
+        </a>
+        <a href="" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <small>Final Assignment</small>
+            <small>19 hrs ago</small>
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <p class="fw-bold">Did I do it right?</p>
+            <small class="text-sm">Christina Lin</small>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-8 d-flex flex-column">
+      <!-- 為什麼設定 d-flex 之後 text-end 才會生效？ -->
+      <small class="text-end text-muted mb-2">2 comments</small>
+      <div class="card">
+        <div class="d-flex justify-content-between">
+          <div class="card-header d-flex w-100 justify-content-between align-items-center">
+            <div class="header-title">
+              <small>Chapter Assignment 2 / HTML&CSS</small>
+              <p class="fw-bold">Please check this file for me, thanks!</p>
+            </div>
+            <a href="#"><span class="material-icons">more_vert</span></a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-user d-flex align-items-center mb-3">
+            <img class="card-user-img rounded-circle me-2" src="./assets/images/emilywang.jpeg" width="40px" height="40px" alt="emilywang">
+            <div class="card-user-info">
+              <h6 class="fw-bold">Emily Wang</h5>
+              <small class="text-muted">10:38 AM (4 hours ago)</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 ms-5 ">
+              <p class="mb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the div is bigger than the height of the img ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
+              <a href="#" class="btn btn-light border"><span class="material-icons align-middle me-2">attach_file</span>HW-2-David.zip</a>
+              <hr>
+            </div>
+          </div>
+          <div class="card-user d-flex align-items-center mb-3">
+            <img class="card-user-img rounded-circle me-2" src="./assets/images/andychen.jpeg" width="40px" height="40px" alt="emilywang">
+            <div class="card-user-info">
+              <h6 class="fw-bold">Andy Chen (You)</h5>
+              <small class="text-muted">13:24 AM (1 hours ago)</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10 ms-5 ">
+              <p class="mb-3">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.<br>You can:<br>• adjust the vertical-align of the image to position it elsewhere (e.g. the middle ) or<br>• change the display so it isn’t inline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- collapse -->
+      <div class="d-flex justify-content-between mt-3">
+        <div class="page-arrow">
+          <span class="material-icons me-4">chevron_left</span>
+          <span class="material-icons">chevron_right</span>
+        </div>
+        <div class="main-btn">
+          <a href="" class="btn btn-outline-success">Mark as read</a>
+          <a href="" class="btn btn-success ms-4">Reply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     </main>
-    </div>
 
 
     <script src="./assets/js/vendors.js"></script>

@@ -11580,7 +11580,7 @@ body {
   font-family: Lato, Roboto Mono;
 }
 
-h1, .h1 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0;
 }
 
@@ -11621,6 +11621,21 @@ p {
 
 main {
   margin-left: 296px;
+}
+
+.list-group-item.active {
+  background-color: #f8f9fa;
+  color: #212529;
+  border-color: #ced4da;
+}
+
+.card-user-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-user-content {
+  width: 87.5%;
 }
 
 /*# sourceMappingURL=all.css.map */
