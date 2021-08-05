@@ -1,3 +1,14 @@
 main{
     margin-left: 296px;
 }
+.list-group-item.active{
+    background-color: $gray-100;
+    color: $gray-900;
+    border-color: $gray-400;
+}
+.card-user-img{
+    object-fit: cover;
+}
+.card-user-content{
+    width: 87.5%;
+}
