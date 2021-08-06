@@ -4,20 +4,83 @@ layout: ./app/layout.ejs
 engine: ejs
 current: admin
 ---
-<div class="row p-4">
-    <div class="col-6 d-flex align-items-end">
-      <h2 class="me-5">Admin</h2>
-      <a href="#" class="nav-link"><span class="material-icons">add</span>Add New Admin</a>
-    </div>
-    <div class="col-6 d-flex justify-content-end align-items-end">
-      <a class="nav-link" href="#"><span class="material-icons">search</span></a>
-      <a class="nav-link ms-4" href="#"><span class="material-icons">notifications_active</span></a>
-    </div>
+<div class="container">
+  <div class="row p-4">
+      <div class="col-6 d-flex align-items-end">
+        <h2 class="me-5">Admin</h2>
+        <a href="#" class="nav-link"><span class="material-icons">add</span>Add New Admin</a>
+      </div>
+      <div class="col-6 d-flex justify-content-end align-items-end">
+        <a class="nav-link" href="#"><span class="material-icons">search</span></a>
+        <a class="nav-link ms-4" href="#"><span class="material-icons">notifications_active</span></a>
+      </div>
+  </div>
 
-    <footer>
-        this is a footer.
-    </footer>
-    <h1>
-      this is H1.
-    </h1>
+  <div class="row p-4">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- 改 arrow 顏色的 class 是什麼？ -->
+            <th scope="col">ID<span class="material-icons me-4 align-middle ms-1">arrow_downward</span></th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Verified</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#1</th>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark" data-toggle="modal" data-target="#exampleModal"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 這裏複製貼上 BS5 官網 modal：live demo 的程式碼，但是跑不出來？？ -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
