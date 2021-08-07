@@ -13,6 +13,12 @@
         overflow: hidden;
         white-space: nowrap;
 }
+// .nav-item.active{
+//     color: $blue;
+//     .nav-item::before{
+//         border-left: 4px solid $text-success;
+//     }
+// }
 .nav-link{
     color: $gray-900;
     padding: 0;
@@ -21,6 +27,15 @@
         vertical-align: middle;
     }
 }
+// 參考為元素
+.nav-link.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 32px;
+    border-left: 4px solid #198754;
+  }
 .profile-img{
     object-fit: cover;
 }
