@@ -11614,6 +11614,15 @@ p {
   vertical-align: middle;
 }
 
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  border-left: 4px solid #198754;
+}
+
 .profile-img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -11632,6 +11641,31 @@ main {
 .card-user-img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.card-icon-wrap {
+  margin-top: -50px;
+}
+
+.modal-body img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.expand_more {
+  display: inline-block;
+}
+
+.expand_less {
+  display: none;
+}
+
+.collapsed .expand_more {
+  display: inline-block;
+}
+
+.collapsed .expand_less {
+  display: none;
 }
 
 /*# sourceMappingURL=all.css.map */

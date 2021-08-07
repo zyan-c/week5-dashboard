@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- 載入 google material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
@@ -53,7 +54,7 @@
   <div class="row p-4">
       <div class="col-6 d-flex align-items-end">
         <h2 class="me-5">Admin</h2>
-        <a href="#" class="nav-link"><span class="material-icons">add</span>Add New Admin</a>
+        <a href="#" class="nav-link"><span class="material-icons me-2 text-success">add</span>Add New Admin</a>
       </div>
       <div class="col-6 d-flex justify-content-end align-items-end">
         <a class="nav-link" href="#"><span class="material-icons">search</span></a>
@@ -67,7 +68,7 @@
         <thead>
           <tr>
             <!-- 改 arrow 顏色的 class 是什麼？ -->
-            <th scope="col">ID<span class="material-icons me-4 align-middle ms-1">arrow_downward</span></th>
+            <th scope="col">ID<span class="material-icons me-4 align-middle ms-1 text-success">arrow_downward</span></th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Verified</th>
@@ -79,55 +80,148 @@
             <td>Emir Wicks</td>
             <td>emir.wicks@mail.com</td>
             <td class="d-flex justify-content-between">Yes
+              <!-- table-editor-link 裝visible和edit的icon，裡面含 modal 和 collapse -->
               <div class="table-editor-link">
-                <a href="#" class="link-dark" data-toggle="modal" data-target="#exampleModal"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <!-- visible icon -->
+                <a href="#" class="link-dark" data-bs-toggle="modal" data-bs-target="#visible"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <div class="modal fade" id="visible" tabindex="-1" role="dialog" aria-labelledby="visible" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body d-flex">
+                        <img class="me-4" src="./assets/images/emir.jpeg" width="155px" height="155px" alt="">
+                        <div class="modal-body-profile w-100">
+                          <div class="modal-close d-flex mb-2 justify-content-between">
+                            <p class="d-block">#1</p>
+                            <a href="#" class="d-block link-dark"><span class="material-icons">clear</span></a>
+                          </div>
+                          <p class="d-inline-block">Admin</p>
+                          <h5>Emir Wicks</h5>
+                          <small class="d-inline-block text-muted mt-2 mb-3">emir-wicks@mail.com</small>
+                          <!-- 裝 btn 和 collapse -->
+                          <div class="d-flex justify-content-between">
+                            <small class="d-inline-block bg-light rounded py-1 px-2">Verified</small>
+                            <a data-bs-toggle="collapse" href="#admin-collapse">
+                              <span class="material-icons expand_more">expand_more</span>
+                              <span class="material-icons expand_less">expand_less</span>
+                            </a>
+                            <div class="collapse" id="admin-collapse">
+                              <button type="button" class="btn btn-outline-danger me-3">deactivate</button>
+                              <button type="button" class="btn btn-success">edit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- edit icon -->
                 <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th scope="row">#2</th>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <th scope="row">#3</th>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#4</th>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#5</th>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#6</th>
+            <td>Fatimah Clark</td>
+            <td>fatimah.clark@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#7</th>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#8</th>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#9</th>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">#10</th>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td class="d-flex justify-content-between">Yes
+              <div class="table-editor-link">
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">visibility</span></a>
+                <a href="#" class="link-dark"><span class="material-icons me-4 align-middle ms-1">edit</span></a>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-
-  <!-- 這裏複製貼上 BS5 官網 modal：live demo 的程式碼，但是跑不出來？？ -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
     </main>
 
