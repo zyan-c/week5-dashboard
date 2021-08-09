@@ -8,7 +8,64 @@ current: admin
   <div class="row p-4">
       <div class="col-6 d-flex align-items-end">
         <h2 class="me-5">Admin</h2>
-        <a href="#" class="nav-link"><span class="material-icons me-2 text-success">add</span>Add New Admin</a>
+        <a href="#newAdmin" class="nav-link" data-bs-toggle="modal">
+          <span class="material-icons me-2 text-success">add</span>Add New Admin
+        </a>
+        <!-- add new admin 的 modal+form -->
+        <div class="modal fade" id="newAdmin">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="d-flex justify-content-between mb-4">
+                  <h4>New Admin</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <h5 class="mb-2">Account</h5>
+                  <div class="mb-2">
+                    <!-- 為什麼text-sm class 無效？ 如何用 bs5 的class 取代自訂的 form-font-size？ -->
+                    <label class="d-block text-sm form-font-size" for="">Name<input class="d-block w-100" type="text"></label>
+                  </div>
+                  <div class="mb-3">
+                    <label class="d-block text-sm form-font-size" for="">Email<input class="d-block w-100" type="email"></label>
+                  </div>
+                  <hr>
+                  <h5 class="mb-2">Verification</h5>
+                  <p class="mb-2"><span class="material-icons align-middle me-2 text-danger">warning</span>Unverified</p>
+                  <div class="btn btn-outline-secondary text-success w-100 mb-3">Send Verification Mail</div>
+                  <hr>
+                  <h5 class="mb-2">Access Level</h5>
+                  <select class="form-select mb-3" aria-label="Default select example">
+                    <option selected>-Choose access level-</option>
+                    <option value="1">admin</option>
+                    <option value="2">Edit only</option>
+                    <option value="3">Read only</option>
+                  </select>
+                  <hr>
+                  <h5 class="mb-2">Custom Access</h5>
+                  <div class="checkbox mb-2">
+                    <input class="me-2 align-middle" type="checkbox">Lecture
+                  </div>
+                  <div class="checkbox mb-2">
+                    <input class="me-2 align-middle" type="checkbox">Coupon
+                  </div>
+                  <div class="checkbox mb-2">
+                    <input class="me-2 align-middle" type="checkbox">Message
+                  </div>
+                  <div class="checkbox mb-2">
+                    <input class="me-2 align-middle" type="checkbox">Setting
+                  </div>
+                  <div class="checkbox mb-5">
+                    <input class="me-2 align-middle" type="checkbox">Task Menu
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <div class="btn btn-outline-success px-3">Cancel</div>
+                    <div class="btn btn-success ms-3 px-3">Add</div>
+                  </div>
+            
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-6 d-flex justify-content-end align-items-end">
         <a class="nav-link" href="#"><span class="material-icons">search</span></a>
@@ -176,4 +233,7 @@ current: admin
       </table>
     </div>
   </div>
+  <!-- form draft -->
+  
+
 </div>
